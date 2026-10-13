@@ -5,4 +5,5 @@ export interface Proyecto {
   descripcion: string;
   tecnologias: string[];
   imagen: string;
+  repositorio?: string;
 }

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a1a12"/>
+      <stop offset="0.55" stop-color="#16110f"/>
+      <stop offset="1" stop-color="#0f1117"/>
+    </linearGradient>
+    <linearGradient id="taza" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4ece1"/>
+      <stop offset="0.6" stop-color="#e6d8c6"/>
+      <stop offset="1" stop-color="#c9b59c"/>
+    </linearGradient>
+    <radialGradient id="cafe" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#c8935f"/>
+      <stop offset="0.7" stop-color="#8a5532"/>
+      <stop offset="1" stop-color="#5e3820"/>
+    </radialGradient>
+    <radialGradient id="luz" cx="0.72" cy="0.45" r="0.45">
+      <stop offset="0" stop-color="#c8935f" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#c8935f" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grilla" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#fondo)"/>
+  <rect width="1600" height="1000" fill="url(#grilla)"/>
+  <rect width="1600" height="1000" fill="url(#luz)"/>
+
+  <g transform="translate(150 190)">
+    <rect width="760" height="620" rx="28" fill="#1b1d26" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <path d="M0 28a28 28 0 0 1 28-28h704a28 28 0 0 1 28 28v42H0z" fill="#232634"/>
+    <circle cx="44" cy="35" r="11" fill="#ff5f57"/>
+    <circle cx="82" cy="35" r="11" fill="#febc2e"/>
+    <circle cx="120" cy="35" r="11" fill="#28c840"/>
+    <text x="380" y="44" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="24" fill="#9aa1b2">CheckoutService.java</text>
+
+    <g font-family="Consolas, 'Courier New', monospace" font-size="27">
+      <text x="40" y="135" fill="#5c6370">1</text>
+      <text x="40" y="185" fill="#5c6370">2</text>
+      <text x="40" y="235" fill="#5c6370">3</text>
+      <text x="40" y="285" fill="#5c6370">4</text>
+      <text x="40" y="335" fill="#5c6370">5</text>
+      <text x="40" y="385" fill="#5c6370">6</text>
+      <text x="40" y="435" fill="#5c6370">7</text>
+      <text x="40" y="485" fill="#5c6370">8</text>
+      <text x="40" y="535" fill="#5c6370">9</text>
+
+      <text x="90" y="135"><tspan fill="#c678dd">public class</tspan><tspan fill="#e5c07b"> Latte</tspan><tspan fill="#e6e8ee"> {</tspan></text>
+      <text x="90" y="185"><tspan fill="#c678dd">  private</tspan><tspan fill="#e5c07b"> PaymentMethod</tspan><tspan fill="#e06c75"> pago</tspan><tspan fill="#e6e8ee">;</tspan></text>
+      <text x="90" y="235" fill="#e6e8ee"> </text>
+      <text x="90" y="285"><tspan fill="#c678dd">  public</tspan><tspan fill="#e5c07b"> Order</tspan><tspan fill="#61afef"> checkout</tspan><tspan fill="#e6e8ee">(</tspan><tspan fill="#e5c07b">Order</tspan><tspan fill="#e06c75"> o</tspan><tspan fill="#e6e8ee">) {</tspan></text>
+      <text x="90" y="335"><tspan fill="#e06c75">    o</tspan><tspan fill="#e6e8ee">.</tspan><tspan fill="#61afef">aplicarCupon</tspan><tspan fill="#e6e8ee">();</tspan></text>
+      <text x="90" y="385"><tspan fill="#e06c75">    o</tspan><tspan fill="#e6e8ee">.</tspan><tspan fill="#61afef">aplicarBeneficios</tspan><tspan fill="#e6e8ee">();</tspan></text>
+      <text x="90" y="435"><tspan fill="#c678dd">    return</tspan><tspan fill="#e06c75"> pago</tspan><tspan fill="#e6e8ee">.</tspan><tspan fill="#61afef">pagar</tspan><tspan fill="#e6e8ee">(</tspan><tspan fill="#e06c75">o</tspan><tspan fill="#e6e8ee">);</tspan></text>
+      <text x="90" y="485" fill="#e6e8ee">  }</text>
+      <text x="90" y="535" fill="#e6e8ee">}</text>
+    </g>
+    <rect x="128" y="562" width="14" height="30" fill="#7c5cff">
+      <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g transform="translate(1010 330)">
+    <ellipse cx="200" cy="470" rx="260" ry="42" fill="#000000" opacity="0.35"/>
+    <ellipse cx="200" cy="455" rx="250" ry="40" fill="#e6d8c6"/>
+    <ellipse cx="200" cy="448" rx="200" ry="28" fill="#f4ece1"/>
+
+    <path d="M360 120c95 0 110 150 10 170" fill="none" stroke="#e6d8c6" stroke-width="34" stroke-linecap="round"/>
+    <path d="M40 60h320l-26 330a40 40 0 0 1-40 36H106a40 40 0 0 1-40-36z" fill="url(#taza)"/>
+    <ellipse cx="200" cy="60" rx="160" ry="34" fill="#d9c8b2"/>
+    <ellipse cx="200" cy="62" rx="146" ry="28" fill="url(#cafe)"/>
+    <path d="M200 46c-24 0-38 10-38 18s14 14 38 14 38-6 38-14-14-18-38-18z" fill="#f4ece1" opacity="0.9"/>
+    <path d="M200 52c-10 6-10 14 0 20m0-20c10 6 10 14 0 20" fill="none" stroke="#c8935f" stroke-width="4"/>
+
+    <text x="200" y="285" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="64" font-weight="700" fill="#8a5532">&lt;/&gt;</text>
+
+    <g fill="none" stroke="#f4ece1" stroke-linecap="round" stroke-width="10" opacity="0.55">
+      <path d="M150 0c-30-40 30-70 0-110s30-70 0-110">
+        <animate attributeName="opacity" values="0.2;0.7;0.2" dur="3s" repeatCount="indefinite"/>
+      </path>
+      <path d="M210 -10c-30-40 30-70 0-110s30-70 0-110">
+        <animate attributeName="opacity" values="0.6;0.15;0.6" dur="3s" repeatCount="indefinite"/>
+      </path>
+      <path d="M270 0c-30-40 30-70 0-110s30-70 0-110">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.4s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+</svg>

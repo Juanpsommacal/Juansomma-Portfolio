@@ -30,7 +30,7 @@ export class Home {
   tecnologias = [
     {
       categoria: "Backend",
-      items: ["Java", "Spring Boot", "JPA / Hibernate", "SQL"]
+      items: ["Java", "Spring Boot", "JPA / Hibernate", "SQL", "JUnit"]
     },
     {
       categoria: "Frontend",
@@ -38,7 +38,7 @@ export class Home {
     },
     {
       categoria: "Conceptos",
-      items: ["Programación Orientada a Objetos", "APIs REST", "Bases de datos relacionales", "Patrones de diseño", "MVC"]
+      items: ["Programación Orientada a Objetos", "APIs REST", "Bases de datos relacionales", "Patrones de diseño", "MVC", "Arquitectura Hexagonal"]
     },
     {
       categoria: "Herramientas",

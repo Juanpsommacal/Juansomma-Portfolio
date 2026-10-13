@@ -6,23 +6,26 @@
       "descripcionCorta": "Mi portfolio web hecho con Angular y json-server.",
       "descripcion": "Aplicación web para presentarme como desarrollador: muestra mis proyectos y permite recibir y gestionar solicitudes de trabajo. Usa componentes, rutas paramétricas, servicios, HttpClient y Reactive Forms, con json-server como persistencia.",
       "tecnologias": ["Angular", "TypeScript", "CSS", "json-server"],
-      "imagen": "https://picsum.photos/seed/portfolio/800/500"
+      "imagen": "img/proyectos/portfolio.jpg",
+      "repositorio": "https://github.com/Juanpsommacal/Juansomma-Portfolio"
     },
     {
       "id": "2",
-      "nombre": "Lista de tareas",
-      "descripcionCorta": "App para organizar tareas con filtros y persistencia local.",
-      "descripcion": "Aplicación para crear, completar y eliminar tareas. Permite filtrar por estado (todas, pendientes, completadas) y guarda los datos en el navegador con localStorage.",
-      "tecnologias": ["HTML", "CSS", "JavaScript"],
-      "imagen": "https://picsum.photos/seed/tareas/800/500"
+      "nombre": "Latte&Code",
+      "descripcionCorta": "API REST para una cadena de cafeterías: pedidos, pagos, cupones de fidelidad y suscripciones, diseñada con principios SOLID.",
+      "descripcion": "Trabajo práctico de Programación III sobre principios SOLID. Es el backend de una cadena de cafeterías que registra pedidos y procesa pagos con tarjeta de crédito, débito, MercadoPago o transferencia, cada uno con sus propias validaciones. Incluye cupones de fidelidad que se generan automáticamente cada 10 pedidos y suscripciones mensuales con beneficios que se aplican solos al calcular el total: café gratis por día, descuento en combos y delivery sin cargo. Está construido con arquitectura hexagonal (puertos y adaptadores) y el patrón Strategy, para poder sumar nuevos medios de pago, cupones o planes sin modificar el resto del sistema. Los servicios tienen tests unitarios.",
+      "tecnologias": ["Java 21", "Spring Boot", "Spring Security", "JPA / Hibernate", "MySQL", "JUnit"],
+      "imagen": "img/proyectos/latte-code.svg",
+      "repositorio": "https://github.com/Juanpsommacal/Latte-Code-Challenge"
     },
     {
       "id": "3",
-      "nombre": "Buscador de películas",
-      "descripcionCorta": "Consume una API pública para buscar películas y ver su detalle.",
-      "descripcion": "Buscador que consulta una API pública de películas. Muestra los resultados en tarjetas y, al seleccionar una, el detalle con sinopsis, puntaje y año de estreno.",
-      "tecnologias": ["Angular", "TypeScript", "API REST"],
-      "imagen": "https://picsum.photos/seed/peliculas/800/500"
+      "nombre": "Delivery Mascotero",
+      "descripcionCorta": "API REST para gestionar un pet shop con delivery: stock, pedidos, pagos, proveedores y promociones.",
+      "descripcion": "Trabajo final grupal de Programación III, desarrollado junto a Juan Jose Stachelski, Matias Vega y Matias Garcia. Es una API REST para administrar un negocio de productos para mascotas: productos (alimentos y antipulgas, modelados con herencia en JPA), clientes con varias direcciones, proveedores, compras que actualizan el stock automáticamente, pedidos con control de stock, pagos totales o parciales y promociones con el precio calculado automáticamente. También genera reportes, como pedidos pendientes y resumen de ventas mensuales. La seguridad está hecha con Spring Security y JWT (registro, login y endpoints protegidos por roles), y el código está organizado en capas: controller, service, repository, DTO y mapper.",
+      "tecnologias": ["Java 21", "Spring Boot", "Spring Security", "JWT", "JPA / Hibernate", "MySQL", "MapStruct", "Swagger"],
+      "imagen": "img/proyectos/delivery-mascotero.jpg",
+      "repositorio": "https://github.com/Juanpsommacal/TP-Final-Delivery-Mascotero"
     }
   ]
 }
