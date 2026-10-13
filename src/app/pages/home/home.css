@@ -1,0 +1,121 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 0 3rem;
+}
+
+.hero-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.saludo {
+  font-family: Consolas, 'Courier New', monospace;
+  color: var(--color-acento-hover);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.1;
+}
+
+.hero-texto h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-texto-suave);
+}
+
+.presentacion {
+  margin: 0.5rem 0 0;
+  max-width: 60ch;
+}
+
+.hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.hero-foto {
+  padding: 0.75rem;
+  border-radius: 28px;
+  max-width: 360px;
+  justify-self: center;
+}
+
+.hero-foto img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 55%;
+  border-radius: 20px;
+}
+
+.seccion {
+  padding: 2rem 0;
+}
+
+.titulo-seccion {
+  margin: 0 0 1.25rem;
+  font-size: 1.6rem;
+}
+
+.grid-estudios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.estudio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.estudio h3,
+.estudio p {
+  margin: 0;
+}
+
+.estudio p {
+  color: var(--color-texto-suave);
+}
+
+.estado {
+  align-self: flex-start;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-acento-hover);
+}
+
+.tecnologias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.grupo h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: var(--color-texto-suave);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 0.5rem;
+  }
+
+  .hero-foto {
+    order: -1;
+    max-width: 260px;
+  }
+}

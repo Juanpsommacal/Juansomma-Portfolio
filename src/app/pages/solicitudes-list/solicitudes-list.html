@@ -1,0 +1,25 @@
+<section>
+  <div class="encabezado">
+    <div>
+      <h1>Solicitudes</h1>
+      <p class="subtitulo">Pedidos de trabajo recibidos</p>
+    </div>
+    <a routerLink="/form" class="btn">+ Nueva solicitud</a>
+  </div>
+
+  <div class="grid-solicitudes">
+    @for (solicitud of service.solicitudes; track solicitud.id) {
+      <a class="glass glass-card solicitud" [routerLink]="['/solicitudes', solicitud.id]">
+        <span class="tipo">{{ solicitud.tipoProyecto }}</span>
+        <h3>{{ solicitud.nombre }}</h3>
+        <p>{{ solicitud.email }}</p>
+        <span class="fecha">Para el {{ solicitud.fecha }}</span>
+      </a>
+    } @empty {
+      <div class="glass vacio">
+        <p>Todavía no hay solicitudes.</p>
+        <a routerLink="/form">¡Mandá la primera!</a>
+      </div>
+    }
+  </div>
+</section>

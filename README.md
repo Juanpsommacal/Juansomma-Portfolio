@@ -1,59 +1,76 @@
-# Portfolio
+# Portfolio — Juan Sommacal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.39.
+Portfolio web personal desarrollado con **Angular** para el Trabajo Práctico de Programación IV (UTN).
 
-## Development server
+## Descripción
 
-To start a local development server, run:
+Aplicación para presentarme como desarrollador, mostrar mis proyectos y recibir solicitudes de trabajo de potenciales clientes.
 
-```bash
-ng serve
-```
+- **Inicio:** presentación personal, formación y tecnologías que conozco.
+- **Mis proyectos:** listado de proyectos y detalle de cada uno (`/proyectos/:id`).
+- **¿Necesitás un proyecto?:** formulario con Reactive Forms y validaciones para enviar una solicitud de trabajo (`/form`).
+- **Solicitudes:** listado de las solicitudes recibidas. Desde el detalle de cada una (`/solicitudes/:id`) se puede editar (`/form/:id`, petición PUT) o eliminar (petición DELETE, con confirmación).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Los datos se guardan con **json-server**, usando un archivo `.json` por entidad:
 
-## Code scaffolding
+| Archivo | Puerto | Endpoint |
+|---|---|---|
+| `proyectos.json` | 3000 | `http://localhost:3000/proyectos` |
+| `solicitudes.json` | 3001 | `http://localhost:3001/solicitudes` |
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Las peticiones HTTP se hacen desde los servicios `ProyectoService` y `SolicitudService`.
 
-```bash
-ng generate component component-name
-```
+## Tecnologías
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Angular 20.3
+- TypeScript
+- HTML y CSS (Grid y Flexbox)
+- json-server 1.0.0-beta.15
 
-```bash
-ng generate --help
-```
+## Requisitos
 
-## Building
+- [Node.js](https://nodejs.org/) **22.12 o superior** (lo exige json-server).
+- npm (viene incluido con Node.js).
 
-To build the project run:
+## Instalación
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Desde la carpeta del proyecto, instalar las dependencias:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
+Esto instala Angular, json-server y el resto de las dependencias. No hace falta instalar nada de forma global.
 
-For end-to-end (e2e) testing, run:
+## Ejecución
+
+La aplicación necesita **dos terminales abiertas al mismo tiempo**: una para json-server y otra para Angular.
+
+### 1. Ejecutar json-server
+
+En la primera terminal:
 
 ```bash
-ng e2e
+npm run api
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Levanta los dos servidores a la vez: proyectos en el puerto **3000** y solicitudes en el **3001**.
 
-## Additional Resources
+También se pueden levantar por separado:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run api:proyectos
+npm run api:solicitudes
+```
+
+### 2. Ejecutar Angular
+
+En la segunda terminal:
+
+```bash
+npm start
+```
+
+Cuando termine de compilar, abrir el navegador en **http://localhost:4200/**.
+
+> Si json-server no está corriendo, la aplicación abre igual, pero los listados de proyectos y solicitudes aparecen vacíos.

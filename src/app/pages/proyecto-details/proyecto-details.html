@@ -1,0 +1,35 @@
+<section class="detalle-pagina">
+  @if (proyecto) {
+    <article class="glass detalle-card">
+      <img [src]="proyecto.imagen" [alt]="proyecto.nombre">
+
+      <div class="detalle-info">
+        <h1>{{ proyecto.nombre }}</h1>
+        <p class="descripcion-corta">{{ proyecto.descripcionCorta }}</p>
+
+        <div class="bloque">
+          <span class="etiqueta">Sobre el proyecto</span>
+          <p>{{ proyecto.descripcion }}</p>
+        </div>
+
+        <div class="bloque">
+          <span class="etiqueta">Tecnologías utilizadas</span>
+          <div class="chips">
+            @for (tecnologia of proyecto.tecnologias; track tecnologia) {
+              <span class="chip">{{ tecnologia }}</span>
+            }
+          </div>
+        </div>
+
+        <div class="acciones">
+          <button type="button" class="btn btn-secundario" (click)="goBack()">Volver</button>
+          <button type="button" class="btn" (click)="goToForm()">Quiero algo así</button>
+        </div>
+      </div>
+    </article>
+  } @else {
+    <div class="glass detalle-card cargando">
+      <p>Cargando proyecto...</p>
+    </div>
+  }
+</section>

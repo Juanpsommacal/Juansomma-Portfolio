@@ -1,0 +1,106 @@
+:host {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header {
+  background: color-mix(in srgb, var(--color-fondo) 85%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.header-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.logo {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--color-texto-suave);
+  transition: color 0.2s;
+}
+
+.nav a:hover,
+.nav a.activo {
+  color: var(--color-texto);
+}
+
+.nav a.activo {
+  border-bottom: 2px solid var(--color-acento);
+}
+
+.nav .btn-cta {
+  background: var(--color-acento);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radio);
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nav .btn-cta:hover {
+  background: var(--color-acento-hover);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-texto);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .btn-menu {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 1rem 1rem;
+    background: var(--color-fondo);
+    border-bottom: 1px solid var(--color-borde);
+  }
+
+  .nav.abierto {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 0.75rem 0;
+  }
+
+  .nav .btn-cta {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}

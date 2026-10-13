@@ -1,0 +1,28 @@
+{
+  "proyectos": [
+    {
+      "id": "1",
+      "nombre": "Portfolio personal",
+      "descripcionCorta": "Mi portfolio web hecho con Angular y json-server.",
+      "descripcion": "Aplicación web para presentarme como desarrollador: muestra mis proyectos y permite recibir y gestionar solicitudes de trabajo. Usa componentes, rutas paramétricas, servicios, HttpClient y Reactive Forms, con json-server como persistencia.",
+      "tecnologias": ["Angular", "TypeScript", "CSS", "json-server"],
+      "imagen": "https://picsum.photos/seed/portfolio/800/500"
+    },
+    {
+      "id": "2",
+      "nombre": "Lista de tareas",
+      "descripcionCorta": "App para organizar tareas con filtros y persistencia local.",
+      "descripcion": "Aplicación para crear, completar y eliminar tareas. Permite filtrar por estado (todas, pendientes, completadas) y guarda los datos en el navegador con localStorage.",
+      "tecnologias": ["HTML", "CSS", "JavaScript"],
+      "imagen": "https://picsum.photos/seed/tareas/800/500"
+    },
+    {
+      "id": "3",
+      "nombre": "Buscador de películas",
+      "descripcionCorta": "Consume una API pública para buscar películas y ver su detalle.",
+      "descripcion": "Buscador que consulta una API pública de películas. Muestra los resultados en tarjetas y, al seleccionar una, el detalle con sinopsis, puntaje y año de estreno.",
+      "tecnologias": ["Angular", "TypeScript", "API REST"],
+      "imagen": "https://picsum.photos/seed/peliculas/800/500"
+    }
+  ]
+}

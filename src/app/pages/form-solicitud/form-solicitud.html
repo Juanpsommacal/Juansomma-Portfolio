@@ -1,0 +1,94 @@
+<section class="form-pagina">
+  <div class="glass form-card">
+    @if (id) {
+      <h1>Editar solicitud</h1>
+      <p class="subtitulo">Modificá los datos de la solicitud.</p>
+    } @else {
+      <h1>¿Necesitás un proyecto?</h1>
+      <p class="subtitulo">Contame tu idea y te respondo a la brevedad.</p>
+    }
+
+    <form class="form-grid" [formGroup]="solicitudForm" (ngSubmit)="submitForm()">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" placeholder="Tu nombre" formControlName="nombre">
+        @if (nombre.hasError('required') && nombre.touched) {
+          <p class="input-error">Este campo es obligatorio</p>
+        }
+        @else if (nombre.hasError('minlength') && nombre.touched) {
+          <p class="input-error">Minimo 3 caracteres</p>
+        }
+        @else if (nombre.hasError('maxlength') && nombre.touched) {
+          <p class="input-error">Maximo 50 caracteres</p>
+        }
+      </div>
+
+      <div class="campo">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="tu@email.com" formControlName="email">
+        @if (email.hasError('required') && email.touched) {
+          <p class="input-error">Este campo es obligatorio</p>
+        }
+        @else if (email.hasError('email') && email.touched) {
+          <p class="input-error">Ingresá un email valido</p>
+        }
+      </div>
+
+      <div class="campo">
+        <label for="tipo">Tipo de proyecto</label>
+        <select id="tipo" formControlName="tipoProyecto">
+          <option value="">Elegí una opción</option>
+          <option value="Página web">Página web</option>
+          <option value="Aplicación web">Aplicación web</option>
+          <option value="E-commerce">E-commerce</option>
+          <option value="Otro">Otro</option>
+        </select>
+        @if (tipoProyecto.hasError('required') && tipoProyecto.touched) {
+          <p class="input-error">Elegí un tipo de proyecto</p>
+        }
+      </div>
+
+      <div class="campo">
+        <label for="presupuesto">Presupuesto estimado</label>
+        <input id="presupuesto" type="number" placeholder="$" formControlName="presupuesto">
+        @if (presupuesto.hasError('required') && presupuesto.touched) {
+          <p class="input-error">Este campo es obligatorio</p>
+        }
+        @else if (presupuesto.hasError('min') && presupuesto.touched) {
+          <p class="input-error">Debe ser mayor a 0</p>
+        }
+      </div>
+
+      <div class="campo">
+        <label for="fecha">Fecha aproximada</label>
+        <input id="fecha" type="date" formControlName="fecha">
+        @if (fecha.hasError('required') && fecha.touched) {
+          <p class="input-error">Este campo es obligatorio</p>
+        }
+      </div>
+
+      <div class="campo completo">
+        <label for="descripcion">Descripción de la idea</label>
+        <textarea id="descripcion" rows="5" placeholder="¿Qué necesitás?" formControlName="descripcion"></textarea>
+        @if (descripcion.hasError('required') && descripcion.touched) {
+          <p class="input-error">Este campo es obligatorio</p>
+        }
+        @else if (descripcion.hasError('minlength') && descripcion.touched) {
+          <p class="input-error">Minimo 10 caracteres</p>
+        }
+        @else if (descripcion.hasError('maxlength') && descripcion.touched) {
+          <p class="input-error">Maximo 500 caracteres</p>
+        }
+      </div>
+
+      <div class="completo acciones">
+        <button type="button" class="btn btn-secundario" (click)="goBack()">Cancelar</button>
+        @if (id) {
+          <button type="submit" class="btn" [disabled]="solicitudForm.invalid">Guardar cambios</button>
+        } @else {
+          <button type="submit" class="btn" [disabled]="solicitudForm.invalid">Enviar solicitud</button>
+        }
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,64 @@
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+.subtitulo {
+  margin: 0;
+  color: var(--color-texto-suave);
+}
+
+.grid-solicitudes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.solicitud {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  text-decoration: none;
+}
+
+.solicitud h3,
+.solicitud p {
+  margin: 0;
+}
+
+.solicitud p,
+.solicitud .fecha {
+  color: var(--color-texto-suave);
+  font-size: 0.9rem;
+}
+
+.solicitud .tipo {
+  align-self: flex-start;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(124, 92, 255, 0.25);
+  color: var(--color-acento-hover);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.vacio {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.vacio p {
+  margin: 0 0 0.5rem;
+}
+
+.vacio a {
+  color: var(--color-acento-hover);
+}

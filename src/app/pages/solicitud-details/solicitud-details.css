@@ -1,0 +1,87 @@
+.detalle-pagina {
+  display: flex;
+  justify-content: center;
+}
+
+.detalle-card {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tipo {
+  align-self: flex-start;
+  padding: 0.15rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(124, 92, 255, 0.25);
+  color: var(--color-acento-hover);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0;
+}
+
+.email {
+  margin: -1rem 0 0;
+  color: var(--color-texto-suave);
+}
+
+.datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.dato {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: var(--radio);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.etiqueta {
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+}
+
+.valor {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.descripcion p {
+  margin: 0.4rem 0 0;
+  white-space: pre-line;
+}
+
+.acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.acciones .btn-secundario {
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .datos {
+    grid-template-columns: 1fr;
+  }
+
+  .acciones {
+    flex-direction: column-reverse;
+  }
+
+  .acciones .btn {
+    width: 100%;
+  }
+}

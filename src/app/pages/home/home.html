@@ -1,0 +1,52 @@
+<section class="hero">
+  <div class="hero-texto">
+    <span class="saludo">Hola, soy</span>
+    <h1>Juan Sommacal</h1>
+    <h2>Desarrollador Full Stack en formación</h2>
+    <p class="presentacion">
+      Estudio programación en la UTN y me gusta construir aplicaciones de punta a punta:
+      desde la base de datos y la API hasta la interfaz que usan los usuarios. Trabajo
+      principalmente con Java y Spring Boot en el backend y con Angular en el frontend,
+      aplicando Programación Orientada a Objetos para escribir código ordenado, reutilizable
+      y fácil de mantener. Mi formación en análisis de datos me ayuda, además, a pensar en
+      cómo aprovechar la información que manejan las aplicaciones.
+    </p>
+    <div class="hero-acciones">
+      <a routerLink="/proyectos" class="btn">Ver mis proyectos</a>
+      <a routerLink="/form" class="btn btn-secundario">¿Necesitás un proyecto?</a>
+    </div>
+  </div>
+
+  <div class="glass hero-foto">
+    <img src="img/perfil.webp" alt="Foto de Juan Sommacal">
+  </div>
+</section>
+
+<section class="seccion">
+  <h2 class="titulo-seccion">Formación</h2>
+  <div class="grid-estudios">
+    @for (estudio of estudios; track estudio.titulo) {
+      <article class="glass glass-card estudio">
+        <span class="estado">{{ estudio.estado }}</span>
+        <h3>{{ estudio.titulo }}</h3>
+        <p>{{ estudio.institucion }}</p>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="seccion">
+  <h2 class="titulo-seccion">Tecnologías</h2>
+  <div class="glass tecnologias">
+    @for (grupo of tecnologias; track grupo.categoria) {
+      <div class="grupo">
+        <h3>{{ grupo.categoria }}</h3>
+        <div class="chips">
+          @for (item of grupo.items; track item) {
+            <span class="chip">{{ item }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

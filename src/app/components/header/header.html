@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="header-contenido">
+    <a routerLink="/" class="logo" (click)="cerrarMenu()">&lt;JS /&gt;</a>
+
+    <button
+      class="btn-menu"
+      type="button"
+      aria-label="Abrir menú"
+      [attr.aria-expanded]="menuAbierto()"
+      (click)="toggleMenu()"
+    >
+      {{ menuAbierto() ? '✕' : '☰' }}
+    </button>
+
+    <nav class="nav" [class.abierto]="menuAbierto()">
+      <a
+        routerLink="/"
+        routerLinkActive="activo"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="cerrarMenu()"
+      >Inicio</a>
+      <a routerLink="/proyectos" routerLinkActive="activo" (click)="cerrarMenu()">Proyectos</a>
+      <a
+        routerLink="/solicitudes"
+        routerLinkActive="activo"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="cerrarMenu()"
+      >Solicitudes</a>
+      <a routerLink="/form" class="btn-cta" (click)="cerrarMenu()">¿Necesitás un proyecto?</a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,23 @@
+{
+  "solicitudes": [
+    {
+      "id": "1",
+      "nombre": "Ana Pérez",
+      "email": "ana.perez@ejemplo.com",
+      "tipoProyecto": "E-commerce",
+      "descripcion": "Necesito una tienda online para vender ropa, con carrito y medios de pago.",
+      "presupuesto": 500000,
+      "fecha": "2026-12-15"
+    },
+    {
+      "id": "2",
+      "nombre": "Carlos Díaz",
+      "email": "carlos.diaz@ejemplo.com",
+      "tipoProyecto": "Página web",
+      "descripcion": "Quiero una página institucional para mi estudio contable con formulario de contacto.",
+      "presupuesto": 200000,
+      "fecha": "2027-01-10"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

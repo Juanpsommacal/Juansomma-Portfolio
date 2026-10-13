@@ -1,0 +1,35 @@
+<section class="detalle-pagina">
+  @if (solicitud) {
+    <article class="glass detalle-card">
+      <span class="tipo">{{ solicitud.tipoProyecto }}</span>
+      <h1>{{ solicitud.nombre }}</h1>
+      <p class="email">{{ solicitud.email }}</p>
+
+      <div class="datos">
+        <div class="dato">
+          <span class="etiqueta">Presupuesto estimado</span>
+          <span class="valor">$ {{ solicitud.presupuesto }}</span>
+        </div>
+        <div class="dato">
+          <span class="etiqueta">Fecha aproximada</span>
+          <span class="valor">{{ solicitud.fecha }}</span>
+        </div>
+      </div>
+
+      <div class="descripcion">
+        <span class="etiqueta">Descripción de la idea</span>
+        <p>{{ solicitud.descripcion }}</p>
+      </div>
+
+      <div class="acciones">
+        <button type="button" class="btn btn-secundario" (click)="goBack()">Volver</button>
+        <button type="button" class="btn btn-peligro" (click)="deleteSolicitud(solicitud.id!)">Eliminar</button>
+        <button type="button" class="btn" (click)="goToEdit(solicitud.id!)">Editar</button>
+      </div>
+    </article>
+  } @else {
+    <div class="glass detalle-card">
+      <p>Cargando solicitud...</p>
+    </div>
+  }
+</section>
